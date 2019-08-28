@@ -7,6 +7,8 @@ public class Vendedor extends Empleados {
 
     public Vendedor(int dni, String nombre, String apellido, String cargo, String email, int sueldoBase) {
         super(dni, nombre, apellido, cargo, email, sueldoBase);
+        //Se puede agregar los atributos
+
     }
 
     public int getPorcentaje() {

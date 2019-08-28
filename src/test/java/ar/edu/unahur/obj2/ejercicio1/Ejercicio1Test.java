@@ -8,10 +8,6 @@ import static org.testng.Assert.*;
 
 public class Ejercicio1Test {
 
-
-
-
-
     @Test
     public void Testempleados() {
         Vendedor v1 = new Vendedor(2345,"Maguita", "Gaiani", "vendedor", "ma@", 30000);
