@@ -1,11 +1,13 @@
 package ar.edu.unahur.obj2.ejercicio1.EmpresaYEmpleados;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Empresa {
     private String nombre;
     private int anioFundacion;
-    ArrayList<Empresa> empleados = new ArrayList();
+    ArrayList<Empleado> empleados = new ArrayList();
 
 
     public Empresa(String nombre, int anioFundacion){
@@ -23,18 +25,23 @@ public class Empresa {
     }
 
     //Agregar empleados y retornarlas
-    public void agrgarEmpleados(Empresa empresa){ empleados.add(empresa); }
+    public void agrgarEmpleados(Empleado empleado){ empleados.add(empleado); }
 
-    public ArrayList<Empresa> getEmpresa(){
+    public void getEmpleados(){
+        empleados.stream().map(e -> e.getNombre()).forEach(e -> System.out.println("Empleado : " + e));
+    }
+
+    public ArrayList<Empleado> empleados(){
         return empleados;
     }
 
 
     @Override
     public String toString() {
-        return "Empresa{" +
-                "nombre=" + nombre +
-                ", anioFundacion='" + anioFundacion
-              + '}';
+        return "Empresa: "+ "\n" +
+                "nombre de Empresa :" + nombre + "\n" +
+                "anioFundacion :" + anioFundacion + "\n" +
+                "Empleados :" + empleados() + "\n"
+              ;
     }
 }
